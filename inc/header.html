@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/code.jquery.com_jquery-1.12.4.js"></script>
+</head>
+<body>
+    <div class="header_wrap">
+        <header>
+            <a href="../pages/main.html" class="logo"><img src="../images/head_logo_t.png" alt="K-water 로고"></a>
+            <ul class="gnb">
+                <li>
+                    <a href="#">ESG경영</a>
+                    <ul>
+                        <li><a href="#">ESG경영</a></li>
+                        <li><a href="#">E(환경)</a></li>
+                        <li><a href="#">S(사회) | 안전</a></li>
+                        <li><a href="#">G(거버넌스)</a></li>
+                        <li><a href="#">경영공시 | SR</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">국민소통</a>
+                    <ul>
+                        <li><a href="#">국민소통센터</a></li>
+                        <li><a href="#">고객헌장</a></li>
+                        <li><a href="#">고객광장</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">맑은물공급 요금</a></li>
+                        <li><a href="#">정보공개</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">새소식</a>
+                    <ul>
+                        <li><a href="#">게시판</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">뉴스룸</a></li>
+                        <li><a href="#">홍보광장</a></li>
+                        <li><a href="#">물사랑공모전</a></li>
+                        <li><a href="#">K-water<br>온라인수도박물관</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">대국민 서비스</a>
+                    <ul>
+                        <li><a href="#">물안심 서비스</a></li>
+                        <li><a href="#">물나눔 서비스</a></li>
+                        <li><a href="#">물융합 서비스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기관소개</a>
+                    <ul>
+                        <li><a href="#">일반현황</a></li>
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">조직 및 연락처</a></li>
+                        <li><a href="#">CI</a></li>
+                        <li><a href="#">문화관</a></li>
+                        <li><a href="#">선수단</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="header_btns">
+                <a href="#;" class="lang">ENGLISH</a>
+                <div class="search"><img src="../images/searh_t.png" alt="검색 버튼"></div>
+                <a href="#;"><img src="../images/hamburger.png" alt="전체 메뉴 버튼"></a>
+            </div>
+        </header>
+    </div>
+
+    <script>
+        $('.gnb > li').hover(function(){
+            $('.gnb ul').stop().slideDown()
+        }, function(){
+            $('.gnb ul').stop().slideUp()
+        })
+    </script>
+</body>
+</html>
