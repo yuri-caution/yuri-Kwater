@@ -79,6 +79,14 @@
         }, function(){
             $('.gnb ul').stop().slideUp()
         })
+
+        $('.gnb').hover(function(){
+            $('.header_wrap').addClass('down')
+            $('.header_wrap').removeClass('up')
+        }, function(){
+            $('.header_wrap').removeClass('down')
+            $('.header_wrap').addClass('up')
+        })
     </script>
 </body>
 </html>
