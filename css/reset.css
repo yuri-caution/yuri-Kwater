@@ -1,6 +1,7 @@
 /* font-family: 'Noto Sans KR', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-
+/* font-family: 'Nanum Gothic', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 * {
     margin: 0;
@@ -59,7 +60,7 @@ img {
 
 body.down::before {
     content: url('../images/blind_bg.png');
-    position: absolute;
+    position: fixed;
     top: -10px;
     left: 0;
     width: 100%;
@@ -76,7 +77,7 @@ body.down::before {
 
 body.down::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 0;
     width: 100%;
@@ -87,7 +88,7 @@ body.down::after {
 
 body.up::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 0;
     width: 100%;
@@ -165,6 +166,11 @@ header {
 
 .gnb ul li a {
     font-size: 16px;
+}
+
+.gnb ul li:hover a {
+    color: #3D66C4;
+    text-decoration: underline;
 }
 
 .gnb ul li:hover a {

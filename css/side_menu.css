@@ -1,0 +1,94 @@
+.side_menu h2 {
+    font-size: 30px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid #3D66C4;
+    margin-bottom: 30px;
+}
+
+.side_menu > ul {
+    border-top: 1px solid #D0D0D0;
+    width: 258px;
+}
+
+.side_menu > ul > li > a {
+    display: block;
+    height: 54px;
+    line-height: 54px;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 20px;
+    border-bottom: 1px solid #D0D0D0;
+    position: relative;
+}
+
+.side_menu > ul > li > a.drop::after {
+    content: url('../images/lnb_depth1_bul_down.png');
+    position: absolute;
+    top: 0;
+    left: calc(100% - 26px);
+    width: 100%;
+}
+
+.side_menu > ul > li.on > a {
+    background-color: #f2f2f2;
+    color: #3D66C4;
+}
+
+
+.side_menu > ul > li.on > a.drop::after {
+    content: url('../images/lnb_depth1_bul_down.png');
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.side_menu > ul > li.on > ul {
+    display: block;
+}
+
+.side_menu > ul > li > ul {
+    padding: 18px 0 4px 20px;
+    border-bottom: 1px solid #D0D0D0;
+    display: none;
+}
+
+.side_menu > ul > li > ul a:hover {
+   text-decoration: underline;
+}
+
+.side_menu > ul > li > ul li.on a {
+    color: #3D66C4;
+}
+
+.side_menu > ul > li > ul > li {
+    margin-bottom: 12px;
+    color: #444444;
+    font-size: 15px;
+}
+
+.more_menu {
+    padding: 12px 0 0 10px;
+    margin-bottom: 18px;
+}
+
+.more_menu li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+}
+
+.more_menu li::after {
+    content: '-';
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.more_menu li:hover a {
+    color: #3D66C4;
+}
+
+

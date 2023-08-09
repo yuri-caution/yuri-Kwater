@@ -34,14 +34,14 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">새소식</a>
+                    <a href="../pages/new.html">새소식</a>
                     <ul>
-                        <li><a href="#">게시판</a></li>
-                        <li><a href="#">채용정보</a></li>
-                        <li><a href="#">뉴스룸</a></li>
-                        <li><a href="#">홍보광장</a></li>
-                        <li><a href="#">물사랑공모전</a></li>
-                        <li><a href="#">K-water<br>온라인수도박물관</a></li>
+                        <li><a href="../pages/new.html">게시판</a></li>
+                        <li><a href="../pages/new.html">채용정보</a></li>
+                        <li><a href="../pages/new.html">뉴스룸</a></li>
+                        <li><a href="../pages/new.html">홍보광장</a></li>
+                        <li><a href="../pages/new.html">물사랑공모전</a></li>
+                        <li><a href="../pages/new.html">K-water<br>온라인수도박물관</a></li>
                     </ul>
                 </li>
                 <li>
@@ -87,6 +87,19 @@
             $('body').removeClass('down')
             $('body').addClass('up')
         })
+
+        var str = location.pathname
+        console.log(str)
+
+        if(str.includes('bill')){
+            $('.gnb > li > a ').eq(1).css('color', '#3D66C4')
+            $('.gnb > li > ul li a').eq(9).css('color', '#3D66C4')
+        }
+
+        if(str.includes('new')){
+            $('.gnb > li > a ').eq(2).css('color', '#3D66C4')
+            $('.gnb > li > ul li a').eq(13).css('color', '#3D66C4')
+        }
     </script>
 </body>
 </html>

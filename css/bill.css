@@ -1,0 +1,200 @@
+
+
+.contents h2 {
+    font-size: 33px;
+    color: #000000;
+    margin-bottom: 42px;
+}
+
+.bill_box {
+    width: 872px;
+    height: 315px;
+    border: 1px solid #3695C2;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 0 47px 60px;
+}
+
+.box_top {
+    background-color: #ffffff;
+    display: flex;
+    gap: 130px;
+    padding: 48px 0 48px 80px;
+}
+
+.box_logo {
+    position: relative;
+}
+
+.box_logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -92px;
+    height: 100%;
+    width: 1px;
+    background-color: #3695C2;
+}
+
+.box_txt h5 {
+    color: #3695C2;
+    font-size: 16px;
+    margin-bottom: 14px;
+    font-weight: 800;
+}
+
+.box_bottom {
+    background-color: #ececec;
+    padding: 26px 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+}
+
+.box_input {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+.box_input div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.box_input div p {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.box_input div input {
+    width: 296px;
+    height: 40px;
+    border: none;
+    box-shadow: 0 1px 0 1px #ddd inset; 
+    padding-left: 10px;
+}
+
+.box_bottom button {
+    width: 44px;
+    height: 44px;
+    border: none;
+    background-color: #047AB3;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Nanum Gothic';
+}
+
+.contents > button {
+    display: block;
+    width: 266px;
+    height: 38px;
+    margin: 0 auto 74px;
+    background-color: #0076C8;
+    color: #ffffff;
+    border: none;
+    font-family: 'Nanum Gothic';
+    cursor: pointer;
+    font-size: 14px;
+    padding-right: 14px;
+    position: relative;
+}
+
+.contents > button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.contents > button:hover {
+    text-decoration: underline;
+}
+
+.contents > h5 {
+    font-size: 16px;
+    color: #323232;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.contents > div > p {
+    position: relative;
+    color: #505050;
+}
+
+.contents > div > p::after {
+    content: url('../images/bullet01.png');
+    position: absolute;
+    top: -2px;
+    left: -15px;
+    width: 100%;
+}
+
+.area_box {
+    width: 980px;
+    height: 80px;
+    background-color: #f8f8f8;
+    padding: 19px 0 0 48px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.notice_box {
+    width: 980px;
+    height: 84px;
+    background-color: #f8f8f8;
+    padding: 24px 0 0 48px;
+}
+
+.notice_box p {
+    margin-bottom: 4px;
+}
+
+.tb {
+    width: 980px;
+    height: 280px;
+    margin-bottom: 80px;
+    text-align: center;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+}
+
+th:nth-of-type(1), td:nth-of-type(1) {
+    border-left: none;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 700;
+    color: #555555;
+    background-color: #f8f8f8;
+    border-top: 2px solid #12A3CC;
+    border-bottom: 2px solid #ececec;
+}
+
+td {
+    font-size: 12px;
+    color: #666666;
+}
+
+td a {
+    color: #444444;
+    text-decoration: underline;
+}
