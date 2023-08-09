@@ -114,39 +114,39 @@
             </div>
             <div class="contents">
                 <h2>뉴스레터</h2>
-                <div class="copy">
-                    <p>모두가 누리는 건강한 물순환 서비스 파트너 K-water 에서는<br>매주 뉴스레터를 발행하고 있습니다.</p>
+                <div class="copy_box">
+                    <p>모두가 누리는 건강한 물순환 서비스 파트너 <span>K-water</span> 에서는<br>매주 뉴스레터를 발행하고 있습니다.</p>
                 </div>
-                <div class="news_letters">
+                <div class="letters_box">
                     <h3>INSIDE NEWSLETTERS</h3>
                     <ul>
                         <li>
                             <div class="photo">
                                 <img src="../images/news_tlist_img01.jpg" alt="K-water News">
-                                <h5>K-water News</h5>
-                                <p>건강한 물 공급을 하여 국민 삶에 기여하는<br>K-water의 최신뉴스를 소개합니다.</p>
                             </div>
+                            <h5>K-water News</h5>
+                            <p>건강한 물 공급을 하여 국민 삶에 기여하는<br>K-water의 최신뉴스를 소개합니다.</p>
                         </li>
                         <li>
                             <div class="photo">
                                 <img src="../images/news_tlist_img02.jpg" alt="K-water Event">
-                                <h5>K-water Event</h5>
-                                <p>푸짐한 상품과 함께 물에 대한 유익한 정보를<br>얻을 수 있는 이벤트를 안내합니다.</p>
                             </div>
+                            <h5>K-water Event</h5>
+                            <p>푸짐한 상품과 함께 물에 대한 유익한 정보를<br>얻을 수 있는 이벤트를 안내합니다.</p>
                         </li>
                         <li>
                             <div class="photo">
                                 <img src="../images/news_tlist_img03.jpg" alt="Travel & Life">
-                                <h5>Travel & Life</h5>
-                                <p>물이 있는 곳을 비롯하여, 대한민국의 아름다운<br>고장과 명소를 추천합니다.</p>
                             </div>
+                            <h5>Travel & Life</h5>
+                            <p>물이 있는 곳을 비롯하여, 대한민국의 아름다운<br>고장과 명소를 추천합니다.</p>
                         </li>
                     </ul>
                 </div>
                 <div class="buttons">
-                    <button>뉴스레터 신청하기</button>
-                    <button>이메일 변경</button>
-                    <button>구독 취소</button>
+                    <button><p>뉴스레터 신청하기</p></button>
+                    <button><p>이메일 변경</p></button>
+                    <button><p>구독 취소</p></button>
                 </div>
 
                 <div class="tb_area">
@@ -156,16 +156,16 @@
                         </div>
                         <div class="order">
                             <span>정렬</span>
-                            <div>등록순</div>
+                            <div class="on">등록순</div>
                             <div>조회순</div>
                         </div>
                     </div>
                     <table class="tb">
                         <tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>발행호수</th>
-                            <th>작성일</th>
+                            <th scope="col" width="107">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col" width="132">발행호수</th>
+                            <th scope="col" width="117">작성일</th>
                         </tr>
                         <tr>
                             <td>394</td>
@@ -229,26 +229,32 @@
                         </tr>
                     </table>
                     <div class="page_number">
-                        <a href="#,"><img src="../images/btn_wNext01.gif" alt="이전 페이지"></a>
-                        <a href="#,"><img src="../images/btn_wNext02.gif" alt="첫 페이지"></a>
-                        <a href="#,">1</a>
-                        <a href="#,">2</a>
-                        <a href="#,">3</a>
-                        <a href="#,">4</a>
-                        <a href="#,">5</a>
-                        <a href="#,">6</a>
-                        <a href="#,">7</a>
-                        <a href="#,">8</a>
-                        <a href="#,">9</a>
-                        <a href="#,">10</a>
-                        <a href="#,"><img src="../images/btn_wNext01.gif" alt="다음 페이지"></a>
-                        <a href="#,"><img src="../images/btn_wNext02.gif" alt="마지막 페이지"></a>
+                        <div class="prev">
+                            <a href="#,"><img src="../images/btn_wNext01.gif" alt="이전 페이지"></a>
+                            <a href="#,"><img src="../images/btn_wNext02.gif" alt="첫 페이지"></a>
+                        </div>
+                        <div class="number">
+                            <a href="#," class="on">1</a>
+                            <a href="#,">2</a>
+                            <a href="#,">3</a>
+                            <a href="#,">4</a>
+                            <a href="#,">5</a>
+                            <a href="#,">6</a>
+                            <a href="#,">7</a>
+                            <a href="#,">8</a>
+                            <a href="#,">9</a>
+                            <a href="#,">10</a>
+                        </div>
+                        <div class="next">
+                            <a href="#,"><img src="../images/btn_wNext01.gif" alt="다음 페이지"></a>
+                            <a href="#,"><img src="../images/btn_wNext02.gif" alt="마지막 페이지"></a>
+                        </div>
                     </div>
                     <div class="search_area">
                         <select name="search" id="search">
                             <option value="전체" selected>전체</option>
-                            <option value="제목" selected>제목</option>
-                            <option value="발행호수" selected>발행호수</option>
+                            <option value="제목">제목</option>
+                            <option value="발행호수">발행호수</option>
                         </select>
                         <div class="search_box">
                             <input type="text" placeholder="검색어를 입력하세요.">
@@ -271,14 +277,14 @@
                     </div>
                     <div class="opinion">
                         <p>개선의견</p>
-                        <textarea name="opinion" id="opinion" cols="30" rows="10" placeholder="개선에 대한 자세한 내용을 입력해주세요.(최대 400자)<br>관련 업무, 건의, 불편신고 등에 관련된 사항은 국민소통-고객광장-민원을 통해 신청해주세요."></textarea>
+                        <textarea name="opinion" id="opinion" cols="90" rows="5" placeholder="개선에 대한 자세한 내용을 입력해주세요.(최대 400자) 관련 업무, 건의, 불편신고 등에 관련된 사항은 국민소통-고객광장-민원을 통해 신청해주세요."></textarea>
                         <a href="#,"><img src="../images/btn_com01.gif" alt="평가하기 버튼"></a>
                     </div>
-                    <div class="contact_box">
-                        <p><span>담당부서</span> : 홍보실</p>
-                        <p><span>담당자</span> : 채송</p>
-                        <p><span>전화번호</span> : 042-629-2245</p>
-                    </div>
+                </div>
+                <div class="contact_box">
+                    <p><span>담당부서</span> : 홍보실</p>
+                    <p><span>담당자</span> : 채송</p>
+                    <p><span>전화번호</span> : 042-629-2245</p>
                 </div>
             </div>
         </div>
