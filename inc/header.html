@@ -67,10 +67,22 @@
             </ul>
             <div class="header_btns">
                 <a href="#;" class="lang">ENGLISH</a>
-                <div class="search"><img src="../images/searh_t.png" alt="검색 버튼"></div>
+                <div class="search">
+                    <img src="../images/searh_t.png" alt="검색 버튼" class="search_btn">
+                    <div class="close">
+                        <img src="../images/search_btn_close.png" alt="검색창 닫기 버튼">
+                    </div>
+                </div>
                 <a href="#;"><img src="../images/hamburger.png" alt="전체 메뉴 버튼"></a>
             </div>
         </header>
+    </div>
+
+    <div class="search_toggle">
+        <div class="search_fff">
+            <input type="text" placeholder="검색어를 입력하세요.">
+            <a href="#;"><img src="../images/search_detail_submit.png" alt="검색 버튼"></a>
+        </div>
     </div>
 
     <script>
@@ -86,6 +98,18 @@
         }, function(){
             $('body').removeClass('down')
             $('body').addClass('up')
+        })
+
+        $('.search_btn').click(function(){
+            $(this).hide();
+            $('.close').show();
+            $('.search_toggle').fadeIn()
+        })
+
+        $('.close').click(function(){
+            $(this).hide();
+            $('.search_btn').show();
+            $('.search_toggle').fadeOut()
         })
 
         var str = location.pathname

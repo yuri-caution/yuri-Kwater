@@ -192,6 +192,59 @@ header {
     cursor: pointer;
 }
 
+.header_btns .search .close {
+    width: 23px;
+    height: 23px;
+    background-color: #3d66c4;
+    display: none;
+}
+
+.header_btns .search .close img {
+    padding: 5px;
+}
+
+/* search_toggle */
+.search_toggle {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 10;
+    height: 180px;
+    padding: 70px 0;
+    background: rgba(20, 33, 59, 0.7);
+    display: none;
+}
+
+.search_fff {
+    width: 745px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: start;
+    border-bottom: 2px solid rgba(255, 255, 255,0.7);
+}
+
+.search_fff input {
+    height: 48px;
+    width: 95%;
+    border: none;
+    color: rgba(255, 255, 255,0.7);
+    background-color: transparent;
+}
+
+.search_fff input::placeholder {
+    color: rgba(255, 255, 255,0.7);
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Noto Sans KR";
+}
+
+.search_fff a {
+    position: absolute;
+    right: 6px;
+}
+
 
 
 /* footer */

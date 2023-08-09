@@ -209,6 +209,11 @@ tr {
 td:nth-of-type(2) {
     text-align: left;
     padding: 14px 0 13px 28px;
+    cursor: pointer;
+}
+
+td:nth-of-type(2):hover {
+    text-decoration: underline;
 }
 
 .page_number {
@@ -290,6 +295,7 @@ td:nth-of-type(2) {
     height: 240px;
     border: 1px solid #f2f2f2;
     padding: 20px 0 0 42px;
+    margin-bottom: 15px;
 }
 
 .desc {
@@ -314,9 +320,15 @@ td:nth-of-type(2) {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 14px;
 }
 
-.star input {
+.star img {
+    margin: 0 4px;
+}
+
+.star p {
     margin-right: 12px;
 }
 
@@ -325,4 +337,34 @@ td:nth-of-type(2) {
     align-items: center;
     justify-content: center;
     gap: 36px;
+}
+
+.opinion p {
+    font-weight: 800;
+    color: #555555;
+}
+
+.opinion textarea {
+    width: 630px;
+    height: 80px;
+}
+
+/* textarea::placeholder {
+    font-size: 14px;
+} */
+
+.contact_box {
+    width: 980px;
+    height: 82px;
+    padding: 32px 0 30px 75px;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 140px;
+    margin-bottom: 87px;
+}
+
+.contact_box span {
+    font-weight: 700;
 }
