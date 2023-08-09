@@ -185,14 +185,12 @@ header {
     width: 100%;
     height: 160px;
     background-color: #141414;
-    position: fixed;
-    bottom: 0;
-    display: none;
+    padding-top: 27px;
 }
 
 footer {
     max-width: 1400px;
-    margin: 27px auto 30px;
+    margin: 0 auto;
 }
 
 .f_top {
@@ -297,3 +295,84 @@ footer {
     align-items: center;
     gap: 13px;
 }
+
+
+/* nav custom */
+
+.nav {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    transition: left 0.3s;
+    z-index: 1;
+  }
+  
+  .nav.active {
+    left: 0;
+  }
+  
+  .nav li {
+    position: relative;
+  }
+  
+  .nav li a {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #333333;
+    display: flex;
+    transition: all 0.5s;
+  }
+  
+  .nav li a span {
+    position: absolute;
+    bottom: -9px;
+    right: 30px;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.5s;
+    display: none;
+  }
+  
+  .nav li a:hover span {
+    display: block;
+  }
+
+  .nav li a.active {
+    position: relative;
+  }
+
+  .nav li a.active::before {
+    content: url('../images/fp-nav_active.png');
+    position: absolute;
+    top: 65%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+
+  .nav li a.active.fff::after {
+    content: url('../images/fp-nav_active1.png');
+    position: absolute;
+    top: 65%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+  
+  .nav li a.active span {
+    color: #3A62BC !important;
+    font-weight: 700;
+    display: block;
+  }
+  
+  .nav li a.active.fff span {
+    color: #ffffff !important;
+    font-weight: 700;
+    display: block;
+  }
+
