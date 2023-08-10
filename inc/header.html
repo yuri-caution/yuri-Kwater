@@ -80,7 +80,7 @@
 
     <div class="search_toggle">
         <div class="search_fff">
-            <input type="text" placeholder="검색어를 입력하세요.">
+            <input type="text" placeholder="검색어를 입력하세요." id="input_search">
             <a href="#;"><img src="../images/search_detail_submit.png" alt="검색 버튼"></a>
         </div>
     </div>
@@ -104,6 +104,7 @@
             $(this).hide();
             $('.close').show();
             $('.search_toggle').fadeIn()
+            $('#input_search').focus()
         })
 
         $('.close').click(function(){

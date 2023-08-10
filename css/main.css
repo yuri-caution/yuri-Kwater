@@ -385,11 +385,17 @@
     line-height: 63px;
     background-color: #18263B;
     padding-left: 20px;
+    display: flex;
 }
 
 .popup_zone h4 {
     font-size: 22px;
     font-weight: 700;
+    color: #ffffff;
+    margin-right: 130px;
+}
+
+#slider_paging {
     color: #ffffff;
 }
 
@@ -891,11 +897,18 @@ iframe.yt_01 {
 
 .cate.notice {
     position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+#slide_paging {
+    color: #000000;
+    margin-left: 110px;
 }
 
 .arr_left, .arr_right {
     position: absolute;
-    bottom: 20px;
+    bottom: 19px;
     width: 14px;
     height: 14px;
     border-bottom: 2px solid #222222;
@@ -915,7 +928,7 @@ iframe.yt_01 {
 
 .pause {
     position: absolute;
-    bottom: 20px;
+    bottom: 19px;
     right: 52px;
     width: 12px;
     height: 18px;
@@ -929,7 +942,7 @@ iframe.yt_01 {
 
 .start {
     position: absolute;
-    bottom: 20px;
+    bottom: 19px;
     right: 48px;
     width: 20px;
     height: 20px;

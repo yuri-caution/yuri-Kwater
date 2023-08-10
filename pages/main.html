@@ -12,6 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="../js/app.js"></script>
+  
     <title>K-water</title>
 </head>
 <body>
@@ -141,10 +142,10 @@
                         </ul>
                         <div class="popup_zone">
                             <h4>K-water 팝업존</h4>
-                            <div class="id"></div>
+                            <div id="slider_paging" class="slide_paging mail_paging">/</div>
                             <div class="arrow_left"></div>
-                            <button class="play"></button>
-                            <button class="stop"></button>
+                            <!-- <button class="play"></button>
+                            <button class="stop"></button> -->
                             <div class="arrow_right"></div>
                         </div>
                     </div>
@@ -290,21 +291,21 @@
                             <div class="cate">카드뉴스</div>
                         </li>
                         <li>
-                            <div class="news_slide">
-                                <div><a href="#;"><img src="../images/1659323533181.jpg" alt="부패공익신고"></a></div>
-                                <div><a href="#;"><img src="../images/1679043782040.jpg" alt="2030부산세계박람회"></a></div>
-                                <div><a href="#;"><img src="../images/1681873648801.jpg" alt="대한민국 안전대전환"></a></div>
-                                <div><a href="#;"><img src="../images/1684226714245.jpg" alt="2023개인정보위험대응공모전"></a></div>
-                                <div><a href="#;"><img src="../images/1684816654022.jpg" alt="안전한국훈련"></a></div>
-                                <div><a href="#;"><img src="../images/1685955385521.jpg" alt="마약신고"></a></div>
-                                <div><a href="#;"><img src="../images/1686559815823.jpg" alt="국민추천포상"></a></div>
-                            </div>
+                            <ul class="news_slide">
+                                <li><a href="#;"><img src="../images/1659323533181.jpg" alt="부패공익신고"></a></li>
+                                <li><a href="#;"><img src="../images/1679043782040.jpg" alt="2030부산세계박람회"></a></li>
+                                <li><a href="#;"><img src="../images/1681873648801.jpg" alt="대한민국 안전대전환"></a></li>
+                                <li><a href="#;"><img src="../images/1684226714245.jpg" alt="2023개인정보위험대응공모전"></a></li>
+                                <li><a href="#;"><img src="../images/1684816654022.jpg" alt="안전한국훈련"></a></li>
+                                <li><a href="#;"><img src="../images/1685955385521.jpg" alt="마약신고"></a></li>
+                                <li><a href="#;"><img src="../images/1686559815823.jpg" alt="국민추천포상"></a></li>
+                            </ul>
                             <div class="cate notice">
                                 공공알림
-                                <div class="id"></div>
+                                <div id="slide_paging" class="slide_paging mail_paging">/</div>
                                 <div class="arr_left"></div>
-                                <div class="pause"></div>
-                                <div class="start"></div>
+                                <!-- <div class="pause"></div>
+                                <div class="start"></div> -->
                                 <div class="arr_right"></div>
                             </div>
                         </li>
@@ -408,6 +409,7 @@
 
 
     <script>
+        // all
         $(".fullpage").fullpage({
             //options here
             autoScrolling: true,
@@ -426,7 +428,7 @@
             },
         });
 
-
+        // intro
         $('.nav_bar').slick({
             slidesToShow: 8,
             slidesToScroll: 1,
@@ -441,7 +443,19 @@
             $(this).find('img').attr('src', $(this).find('img').attr('src').replace('_fff.svg', '.svg'))
         })
 
-        $('.slider ul').slick({
+
+        // k-water
+        var $slide = $('.slider ul');
+
+        $slide.on('init reInit', function (event, slick) {//페이징이니셜
+            $("#slider_paging").html('<span class="page">'+ (slick.currentSlide+1) +'</span> / ' + ($('.slider ul > li').length));
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){ //슬라이드 변경 시 페이징 변경
+            //페이징 변경
+            var i = (nextSlide ? nextSlide : 0) + 1;
+            $("#slider_paging").find(".page").text(i);
+        });
+
+        $slide.slick({
             autoplay: true,
             dots: true,
             prevArrow : $('.arrow_left'), 
@@ -451,14 +465,26 @@
         $('.play').click(function(){
             $(this).hide()
             $('.stop').show()
-            $('.slider ul').slick('slickPlay');
+            $slideN.slick('slickPlay');
         });
         
         $('.stop').click(function(){
             console.log('클릭')
             $(this).hide()
             $('.play').show()
-            $('.slider ul').slick('slickPause');
+            $slideN.slick('slickPause');
+        });
+
+
+        // news
+        var $slideN = $('.news_slide');
+
+        $slideN.on('init reInit', function (event, slick) {//페이징이니셜
+            $("#slide_paging").html('<span class="page">'+ (slick.currentSlide+1) +'</span> / ' + (($('.news_slide li').length -1) / 2));
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){ //슬라이드 변경 시 페이징 변경
+            //페이징 변경
+            var i = (nextSlide ? nextSlide : 0) + 1;
+            $("#slide_paging").find(".page").text(i);
         });
 
         $('.news_slide').slick({
@@ -474,8 +500,7 @@
         });
         
         $('.pause').click(function(){
-            console.log('클릭')
-            $(this).hide()
+            $(this).css('display', 'none')
             $('.start').show()
             $('.news_slide').slick('slickPause');
         });
