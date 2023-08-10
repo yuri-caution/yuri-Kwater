@@ -53,11 +53,6 @@ img {
     z-index: 999;
 }
 
-/* body::before {
-
-    opacity: 0;
-} */
-
 body.down::before {
     content: url('../images/blind_bg.png');
     position: fixed;
