@@ -442,3 +442,70 @@ footer {
     display: block;
   }
 
+
+@media (max-width: 1020px) {
+    
+/* header */
+
+.header_wrap {
+    height: 50px;
+}
+
+header {
+    padding: 10px 15px;
+}
+
+body.down::before {
+    display: none;
+}
+
+body.down::after {
+    display: none;
+}
+
+body.up::after {
+    display: none;
+}
+
+.logo {
+    height: 27px;
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+}
+.logo img {
+    width: 100%;
+}
+
+.header_btns {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    z-index: 1;
+}
+
+.header_btns .lang {
+    display: none;
+}
+
+
+.gnb {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+    left: 0;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100%;
+}
+
+
+
+
+
+}
+

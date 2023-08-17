@@ -12,24 +12,32 @@ $(function(){
     //     location.reload()
     // }
 
-    // all
-    $(".fullpage").fullpage({
-        //options here
-        autoScrolling: true,
-        scrollHorizontally: true,
-        menu: ".nav",
-        anchors: ["page1", "page2", "page3", "page4", "page5", "page6"],
-        navigation: false,
-        onLeave: function (anchorLink, index) {
-            if (index == 3 || index == 6){
-                $('.nav li a').css('background-color', "#ffffff")
-                $('.nav li a').find('span').css('color', "#ffffff")
-            }else{
-                $('.nav li a').css('background-color', "#333333")
-                $('.nav li a').find('span').css('color', "#333333")
-            }
-        },
-    });
+
+    $(window).resize(function(){ 
+        if (window.innerWidth < 1021) {
+            
+        }else{
+            // all
+            $(".fullpage").fullpage({
+                //options here
+                autoScrolling: true,
+                scrollHorizontally: true,
+                menu: ".nav",
+                anchors: ["page1", "page2", "page3", "page4", "page5", "page6"],
+                navigation: false,
+                onLeave: function (anchorLink, index) {
+                    if (index == 3 || index == 6){
+                        $('.nav li a').css('background-color', "#ffffff")
+                        $('.nav li a').find('span').css('color', "#ffffff")
+                    }else{
+                        $('.nav li a').css('background-color', "#333333")
+                        $('.nav li a').find('span').css('color', "#333333")
+                    }
+                },
+            });
+
+        }
+    })
 
     // intro
     $('.nav_bar').slick({

@@ -115,7 +115,7 @@
 .bg_02::after {
     content: url('../images/main_sec2_bg02.png');
     position: absolute;
-    top: 82%;
+    top: 90%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1243,4 +1243,13 @@ iframe.yt_01 {
 
 .right_list ul li span {
     white-space: nowrap;
-} 
+}
+
+
+
+
+@media (max-width: 1020px) {
+
+
+
+}
