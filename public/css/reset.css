@@ -49,6 +49,7 @@ img {
     height: 70px;
     background-color: #ffffff;
     position: fixed;
+    top: 0;
     box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.1);
     z-index: 999;
 }
@@ -142,6 +143,10 @@ header {
     z-index: -1;
 }
 
+.mob {
+    display: none;
+}
+
 .gnb > li:hover >a {
     color: #3A62BC;
 }
@@ -196,6 +201,16 @@ header {
 
 .header_btns .search .close img {
     padding: 5px;
+}
+
+.close_menu {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: none;
 }
 
 /* search_toggle */
@@ -446,66 +461,160 @@ footer {
 @media (max-width: 1020px) {
     
 /* header */
-
 .header_wrap {
     height: 50px;
-}
-
-header {
-    padding: 10px 15px;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    max-width: 1020px;
 }
 
 body.down::before {
-    display: none;
+    content: '';
 }
 
 body.down::after {
-    display: none;
+    width: 0;
 }
 
 body.up::after {
-    display: none;
+    width: 0;
 }
 
-.logo {
-    height: 27px;
-    position: fixed;
-    top: 10px;
-    z-index: 1;
+header {
+    position: relative;
+    width: 100%;
+    padding: 11px 15px;
 }
+
 .logo img {
     width: 100%;
+    height: 27px;
+}
+
+.gnb {
+    position: static;
+    position: absolute;
+    top: 50px;
+    right: -100vh;
+    height: 100vh;
+    display: initial;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+@keyframes sliding {
+    0% {right: -100vh;}
+    100% {right: 0;}
+}
+
+@keyframes re-sliding {
+    0% {right: 0}
+    100% {right: -100vh;}
+}
+
+.gnb::after {
+    content: url('../images/mob_gnb_bg.png');
+    position: absolute;
+    bottom: 46px;
+    left: 0;
+}
+
+.gnb > li > a {
+    font-size: 20px;
+    font-weight: 500;
+    width: 335px;
+    height: 60px;
+    line-height: initial;
+    text-align: left;
+    border-bottom: 1px solid #cbcbcb;
+    padding: 15px 0 16px 27px;
+    position: relative;
+    z-index: 1;
+}
+
+.mob {
+    display: block;
+}
+
+.mob a {
+    border-bottom: none !important;
+}
+
+.gnb > li > a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -40%;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/mob_gnb_bul.png');
+    background-position: center;
+    background-size: 15px 9px;
+    background-repeat: no-repeat;
 }
 
 .header_btns {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    display: flex;
-    align-items: center;
     gap: 23px;
-    z-index: 1;
 }
 
 .header_btns .lang {
-    display: none;
+    position: absolute;
+    top: 480px;
+    right: -100vh;
+    width: 167px;
+    height: 45px;
+    border: 1px solid #cccccc;
+    line-height: 45px;
+    text-align: center;
+    color: #989898;
+    transition: all 0.5s;
 }
 
-
-.gnb {
-    display: none;
-    flex-direction: column;
+.header_btns .hamburger {
     position: relative;
-    top: 40px;
-    left: 0;
-    background-color: #ffffff;
-    height: 100vh;
-    width: 100%;
 }
 
+.header_btns .hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 1px;
+    height: 100%;
+    background-color: #E5E9EF;
+}
 
+/* search_toggle */
+.search_toggle {
+    top: -20px;
+    height: 118px;
+    padding: 38px 55px;
+}
 
+.search_fff {
+    width: 100%;
+    height: 40px;
+}
 
+.search_fff input {
+    height: 40px;
+    width: 85%;
+}
+
+.search_fff input::placeholder {
+    font-size: 14px;
+}
+
+.search_fff a {
+    position: absolute;
+    right: 6px;
+}
+
+.search_toggle img {
+    height: 19px;
+}
 
 }
 

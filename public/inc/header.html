@@ -64,6 +64,14 @@
                         <li><a href="#">찾아오시는길</a></li>
                     </ul>
                 </li>
+                <li class="mob">
+                    <a href="#">사이트안내</a>
+                    <ul>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">저작권 정책</a></li>
+                    </ul>
+                </li>
             </ul>
             <div class="header_btns">
                 <a href="#;" class="lang">ENGLISH</a>
@@ -73,7 +81,10 @@
                         <img src="../images/search_btn_close.png" alt="검색창 닫기 버튼">
                     </div>
                 </div>
-                <a href="#;"><img src="../images/hamburger.png" alt="전체 메뉴 버튼"></a>
+                <a href="#;" class="hamburger">
+                    <img src="../images/hamburger.png" alt="전체 메뉴 버튼">
+                    <img class="close_menu" src="../images/search_close.png" alt="닫기 버튼">
+                </a>
             </div>
         </header>
     </div>
@@ -86,45 +97,62 @@
     </div>
 
     <script>
-        $('.gnb > li').hover(function(){
-            $('.gnb ul').stop().slideDown()
-        }, function(){
-            $('.gnb ul').stop().slideUp()
+
+        $(window).resize(function(){ 
+            if (window.innerWidth < 1021) {
+
+            }else{
+                $('.gnb > li').hover(function(){
+                    $('.gnb ul').stop().slideDown()
+                }, function(){
+                    $('.gnb ul').stop().slideUp()
+                })
+        
+                $('.gnb').hover(function(){
+                    $('body').addClass('down')
+                    $('body').removeClass('up')
+                }, function(){
+                    $('body').removeClass('down')
+                    $('body').addClass('up')
+                })
+        
+                $('.search_btn').click(function(){
+                    $(this).hide();
+                    $('.close').show();
+                    $('.search_toggle').fadeIn()
+                    $('#input_search').focus()
+                })
+        
+                $('.close').click(function(){
+                    $(this).hide();
+                    $('.search_btn').show();
+                    $('.search_toggle').fadeOut()
+                })
+        
+                var str = location.pathname
+                console.log(str)
+        
+                if(str.includes('bill')){
+                    $('.gnb > li > a ').eq(1).css('color', '#3D66C4')
+                    $('.gnb > li > ul li a').eq(9).css('color', '#3D66C4')
+                }
+        
+                if(str.includes('new')){
+                    $('.gnb > li > a ').eq(2).css('color', '#3D66C4')
+                    $('.gnb > li > ul li a').eq(13).css('color', '#3D66C4')
+                }
+            }
         })
 
-        $('.gnb').hover(function(){
-            $('body').addClass('down')
-            $('body').removeClass('up')
-        }, function(){
-            $('body').removeClass('down')
-            $('body').addClass('up')
+        $('.hamburger img:first').click(function(){
+            $('.gnb, .header_btns .lang').css('animation', 'sliding 0.8s forwards')
+            $('.close_menu').show()
         })
-
-        $('.search_btn').click(function(){
-            $(this).hide();
-            $('.close').show();
-            $('.search_toggle').fadeIn()
-            $('#input_search').focus()
+        
+        $('.close_menu').click(function(){
+            $('.gnb, .header_btns .lang').css('animation', 're-sliding 1.5s forwards')
+            $('.close_menu').hide()
         })
-
-        $('.close').click(function(){
-            $(this).hide();
-            $('.search_btn').show();
-            $('.search_toggle').fadeOut()
-        })
-
-        var str = location.pathname
-        console.log(str)
-
-        if(str.includes('bill')){
-            $('.gnb > li > a ').eq(1).css('color', '#3D66C4')
-            $('.gnb > li > ul li a').eq(9).css('color', '#3D66C4')
-        }
-
-        if(str.includes('new')){
-            $('.gnb > li > a ').eq(2).css('color', '#3D66C4')
-            $('.gnb > li > ul li a').eq(13).css('color', '#3D66C4')
-        }
     </script>
 </body>
 </html>
