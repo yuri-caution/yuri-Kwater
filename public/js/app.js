@@ -31,6 +31,10 @@ $(function(){
         },
         responsiveWidth: 1021
     });
+    
+    if (window.innerWidth < 1021){
+        $(".fullpage").fullpage.setAllowScrolling(true);
+    } 
 
     // intro
     $('.nav_bar').on('init reInit', function (event, slick) {
